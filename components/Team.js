@@ -17,6 +17,7 @@ const Team = () => {
 
         Object.values(team).forEach((item) => {
           if (
+            item.SamyarthTeam !== null &&
             item.Association !== 'Not Active' &&
             item.Association !== null &&
             item.Photo !== null &&
