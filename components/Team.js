@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Typography, Container, Divider, Grid, Box } from '@mui/material';
+import Image from 'next/image';
 
 const Team = () => {
   const [teamData, setTeamData] = useState({ supporters: [], teamMember: [] });
@@ -51,11 +52,7 @@ const Team = () => {
         {teamData.teamMember.map((teamMember, index) => (
           <Grid item key={index} xs={12} sm={6} md={4} lg={3}>
             <Box textAlign="center">
-              <img
-                src={teamMember.Photo.replace('http://', 'https://')}  // Replace 'http://' with 'https://'
-                alt={teamMember.Name}
-                style={{ width: '100px', height: '100px', borderRadius: '50%' }}
-              />
+              <Image src={teamMember.Photo.replace('http://', 'https://')} alt={teamMember.Name} width={100} height={100} style={{ borderRadius: '50%' }} />
             </Box>
             <Box textAlign="center">
               <Typography variant="body1">{teamMember.Name}</Typography>

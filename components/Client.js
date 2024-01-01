@@ -37,10 +37,7 @@ const Client = () => {
         <IconButton onClick={handlePrev} aria-label="Previous">
           <KeyboardArrowLeftIcon sx={{  fontSize: 40 }} />
         </IconButton>
-        <img
-          src={clientLogos[currentIndex]}
-          alt={`Client Logo ${currentIndex + 1}`}
-        />
+        <img src={clientLogos[currentIndex]} alt={`Client Logo ${currentIndex + 1}`} />
         <IconButton onClick={handleNext} aria-label="Next">
           <ChevronRightIcon sx={{ fontSize: 40 }} />
         </IconButton>
