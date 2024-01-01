@@ -8,9 +8,8 @@ const Team = () => {
     const fetchTeamData = async () => {
       try {
         const response = await axios.get(
-          'https://navgurukul.github.io/tarabai-shinde/data/ng_team.json'
+          'https://navgurukul.github.io/tarabai-shinde/data/meraki_team.json'
         );
-        console.log('API Response:', response.data);
         const team = response.data;
         const supporters = [];
         const teamMember = [];
@@ -30,8 +29,7 @@ const Team = () => {
             }
           }
         });
-        console.log('Supporters:', supporters);
-        console.log('Team Members:', teamMember);
+
         setTeamData({ supporters, teamMember });
       } catch (error) {
         console.error('Error fetching team data:', error);
@@ -41,7 +39,7 @@ const Team = () => {
   }, []);
 
   return (
-    <Container sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', mt: '32px', mb: 15,}} maxWidth="lg" >
+    <Container sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', mt: '32px', mb: 15 }} maxWidth="lg">
       <Typography variant="h4" textAlign={'center'} mb={'32px'}>
         The Team
         <Divider
@@ -54,7 +52,7 @@ const Team = () => {
           <Grid item key={index} xs={12} sm={6} md={4} lg={3}>
             <Box textAlign="center">
               <img
-                src={teamMember.Photo}
+                src={teamMember.Photo.replace('http://', 'https://')}  // Replace 'http://' with 'https://'
                 alt={teamMember.Name}
                 style={{ width: '100px', height: '100px', borderRadius: '50%' }}
               />

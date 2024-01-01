@@ -16,7 +16,7 @@ theme = createTheme(theme, {
     primary: {
       main: "#4A9088",
       light: "#D4DAE8",
-      dark: "#192954",
+      dark: "#4A9088",
       contrastText: '#FFFFFF'
     },
 
@@ -72,7 +72,6 @@ theme = createTheme(theme, {
     Grey: {
       main: "#949494",
       light: "#DEDEDE",
-      // dark: "#3A8137",
       contrastText: "#ffffff",
     },
 
@@ -97,6 +96,9 @@ theme = createTheme(theme, {
     fontFamily: ['Raleway', 'Noto Sans', 'Alice', 'Nunito Sans', 'sans-serif'].join(','),
     h3:{
         fontFamily: 'Alice',
+        [theme.breakpoints.down("sm")]: {
+          fontSize: "30px",
+        },
         fontSize: '56px',
         fontWeight: 400,
         lineHeight: '84px',
@@ -162,18 +164,21 @@ theme.components = {
   MuiButton: {
     styleOverrides: {
       root: {
-        minWidth: 'max-content',
+        width: '280px',
         height: '48px',
-        borderRadius: '8px',
         padding: '8px 16px',
         display: 'flex',
-        alignItems: 'center',
         justifyContent: 'center',
+        alignItems: 'center',
         gap: '8px',
-
+        flexShrink: 0,
+        textTransform: 'capitalize',
+        '&:hover': {
+          backgroundColor: `${theme.palette.primary.dark} !important`,
+        },
       },
-    },
-  },
+      },
+  }, 
 };
 
 export default theme;

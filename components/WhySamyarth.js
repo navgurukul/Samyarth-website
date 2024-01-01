@@ -23,8 +23,7 @@ const WhySamyarth = () => {
             ))}
             </Grid>
             <Typography variant="body1" textAlign={'center'} mt={'32px'} mb={'32px'} >
-                All the proceeds go to the Samyarth team staying true to the spirit of cooperativism further<br /> enabling extremely competitive pricing for the organisations
-            
+                All the proceeds go to the Samyarth team staying true to the spirit of cooperativism further<br /> enabling extremely competitive pricing for the organisations    
             </Typography>
       </Container>
     );
