@@ -97,7 +97,7 @@ theme = createTheme(theme, {
     h3:{
         fontFamily: 'Alice',
         [theme.breakpoints.down("sm")]: {
-          fontSize: "30px",
+          fontSize: "32px",
         },
         fontSize: '56px',
         fontWeight: 400,
