@@ -5,6 +5,7 @@ import Image from 'next/image';
 
 const Team = () => {
   const [teamData, setTeamData] = useState({ supporters: [], teamMember: [] });
+
   useEffect(() => {
     const fetchTeamData = async () => {
       try {
@@ -32,13 +33,26 @@ const Team = () => {
           }
         });
 
-        setTeamData({ supporters, teamMember });
+        // Shuffle the teamMember array
+        const shuffledTeamMember = shuffleArray(teamMember);
+
+        setTeamData({ supporters, teamMember: shuffledTeamMember });
       } catch (error) {
         console.error('Error fetching team data:', error);
       }
     };
+
     fetchTeamData();
-  }, []);
+  }, []); // Empty dependency array to simulate component mount
+
+  // Fisher-Yates (Knuth) shuffle algorithm
+  const shuffleArray = (array) => {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+  };
 
   return (
     <Container sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', mt: '32px', mb: 15 }} maxWidth="lg">
