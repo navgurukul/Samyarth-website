@@ -20,7 +20,7 @@ const Home = () => {
       <Typography variant="h3" textAlign={'center'} mb={'32px'} >
         <span style={{ color: '#4A9088' }}>Samy</span>arth is a cooperative of marginalized <br /> women, support businesses to be what they can <br /> be, with technical and content services
       </Typography>
-      <Link href="https://rd93uhm9wse.typeform.com/to/heMHX7HJ" passHref className={`text ${styles.text}`}>
+      <Link href="https://rd93uhm9wse.typeform.com/to/heMHX7HJ"  target="_blank"  passHref className={`text ${styles.text}`}>
         <Button variant="contained" color="primary" >  
           Collaborate With Us  
         </Button>
