@@ -1,0 +1,11 @@
+.header {
+  background-color: #FFFFFF;
+  position: sticky;
+  top: 0;
+  padding: 10px;
+}
+
+.navbarText {
+  color: #404040;
+  text-decoration: none;
+}
