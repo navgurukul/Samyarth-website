@@ -5,7 +5,7 @@ import { Facebook, Twitter, Instagram } from '@mui/icons-material';
 
 const Footer = () => {
   return (
-    <div style={{ width: '100%', backgroundColor: '#FFFFFF', padding: '10px', marginTop: 'auto' }}>
+    <div style={{ width: '100%', backgroundColor: '#FFFFFF', padding: '10px', marginTop: '32px' }}>
       <Container>
         <Grid container>
           <Grid item xs={12} md={6}>
@@ -41,7 +41,7 @@ const Footer = () => {
               </Box>
               <Box>
                 <Typography variant="body2">
-                  samyarth@email.com
+                  vaibhav.m@navgurkul.org
                 </Typography>
               </Box>
             </Box>

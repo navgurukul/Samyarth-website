@@ -7,7 +7,7 @@ import styles from '../styles/header.module.css';
 import Link from 'next/link';
 
 const Header = () => {
-  const email = 'vaibhavkumar@navgurukul.org';
+  const email = 'vaibhav.m@navgurkul.org';
   return (
     <AppBar position="sticky" elevation={0} className={styles.header}>
       <Toolbar>
@@ -18,7 +18,7 @@ const Header = () => {
           <Grid item>
           <Link href={`mailto:${email}`} passHref className={styles.navbarText}>
             <Typography variant="h6"  >
-              Get Involved
+              Connect With Us
             </Typography>
           </Link> 
           </Grid>
