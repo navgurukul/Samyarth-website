@@ -14,7 +14,7 @@
     "@mui/icons-material": "^5.15.2",
     "@mui/material": "^5.15.2",
     "axios": "^1.6.3",
-    "next": "14.0.4",
+    "next": "13.5.4",
     "react": "^18",
     "react-dom": "^18",
     "typeface-alice": "^1.1.13",
