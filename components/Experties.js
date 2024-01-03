@@ -31,12 +31,12 @@ const Experties = () => {
   ];
 
   return (
-    <Container sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', mt: '32px',}} maxWidth="lg">
+    <Container sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', mt: '48px',}} maxWidth="lg">
       <Typography variant="h4" textAlign={'center'} mb={'32px'}>
         Our Expertise
         <Divider variant="middle" sx={{ background: '#4A9088', height: '3px', width: '40%', margin: 'auto' }} />
       </Typography>
-      <Grid container spacing={2} justifyContent="center">
+      <Grid container spacing={2} justifyContent="center" mb={'32px'}>
         {expertiseData.map((expertise, index) => (
           <Grid item key={index} xs={12} sm={4} md={4} sx={{ display: 'flex', justifyContent: 'center' }}>
             <div style={{ textAlign: 'center', marginTop: '16px' }}>
