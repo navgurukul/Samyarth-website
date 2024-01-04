@@ -2,7 +2,7 @@ import { Typography, Container,Grid, Divider } from '@mui/material';
 
 const WorkingModel = () => {
     return (
-        <Container  sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center',justifyContent: 'center', }} maxWidth="lg">   
+        <Container  sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center',justifyContent: 'center',  mt:5}} maxWidth="lg">   
             <Typography variant="h4" textAlign={'center'} mb={'32px'} >
                 Working Model
                 <Divider variant="middle" sx={{ background: '#4A9088',height: '3px',width: '40%', margin: 'auto',}}/>

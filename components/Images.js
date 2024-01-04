@@ -12,11 +12,16 @@ function Images() {
     '/images/learning4.jpg',
   ];
 
+  // Only display images on desktop view (isActive is false)
+  if (isActive) {
+    return null;
+  }
+
   return (
-    <Grid container justifyContent="center" sx={{ mt: '64px', mb: "32px" }}>
+    <Grid container justifyContent="center" sx={{ mt: '64px', mb: "30px" }}>
       {imageUrls.map((imageUrl, index) => (
         <Grid item key={index} xs={12} sm={6} md={4}>
-          <div style={{ position: 'relative', width: '100%', height: '0', paddingBottom: '100%' }}>
+          <div style={{ position: 'relative', width: '100%', height: '100px', paddingBottom: '100%' }}>
             <Image
               src={imageUrl}
               alt={`Image ${index + 1}`}

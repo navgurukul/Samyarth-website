@@ -1,12 +1,11 @@
-import { createTheme } from '@mui/material/styles';
-import { breakpoints } from './constant';
-
+import { createTheme } from "@mui/material/styles";
+import { breakpoints } from "./constant";
 
 let theme = createTheme();
 
 theme = createTheme(theme, {
   breakpoints,
-   palette: {
+  palette: {
     mode: "light",
     default: {
       main: "#404040",
@@ -17,7 +16,7 @@ theme = createTheme(theme, {
       main: "#4A9088",
       light: "#D4DAE8",
       dark: "#4A9088",
-      contrastText: '#FFFFFF'
+      contrastText: "#FFFFFF",
     },
 
     secondary: {
@@ -93,92 +92,96 @@ theme = createTheme(theme, {
     divider: "#949494",
   },
   typography: {
-    fontFamily: ['Raleway', 'Noto Sans', 'Alice', 'Nunito Sans', 'sans-serif'].join(','),
-    h3:{
-        fontFamily: 'Alice',
-        [theme.breakpoints.down("sm")]: {
-          fontSize: "32px",
-        },
-        fontSize: '56px',
-        fontWeight: 400,
-        lineHeight: '84px',
-        letterSpacing: '0em',
+    fontFamily: [
+      "Raleway",
+      "Noto Sans",
+      "Alice",
+      "Nunito Sans",
+      "sans-serif",
+    ].join(","),
+    h3: {
+      fontFamily: "Alice",
+      [theme.breakpoints.down("sm")]: {
+        fontSize: "	2rem",
+        lineHeight: "2.5rem",
+      },
+      fontSize: "56px",
+      fontWeight: 400,
+      lineHeight: "80px",
+      letterSpacing: "0em",
     },
     h4: {
-      fontFamily: 'Alice',
-      fontSize: '42px',
+      fontFamily: "Alice",
+      fontSize: "42px",
       fontWeight: 400,
-      lineHeight: '63px',
-      letterSpacing: '0px',
+      lineHeight: "63px",
+      letterSpacing: "0px",
     },
-    h6:{
-      fontFamily: 'Nunito Sans',
-      fontSize: '18px',
+    h6: {
+      fontFamily: "Nunito Sans",
+      fontSize: "18px",
       fontWeight: 700,
-      lineHeight: '28px',
-      letterSpacing: '0px',
+      lineHeight: "28px",
+      letterSpacing: "0px",
     },
     subtitle1: {
-        fontFamily: "Raleway",
-        fontSize: "18px",
-        fontWeight: 700,
-        lineHeight: "31px",
-        letterSpacing: 0,
+      fontFamily: "Raleway",
+      fontSize: "18px",
+      fontWeight: 700,
+      lineHeight: "31px",
+      letterSpacing: 0,
     },
     body1: {
-        fontFamily: "Raleway",
-        fontSize: "18px",
-        fontWeight: 400,
-        lineHeight: "31px",
-        letterSpacing:'0px',
+      fontFamily: "Raleway",
+      fontSize: "18px",
+      fontWeight: 400,
+      lineHeight: "31px",
+      letterSpacing: "0px",
     },
     body2: {
-        fontFamily: "Noto Sans",
-        fontSize: "14px",
-        fontWeight: 400,
-        lineHeight: "24px",
-        letterSpacing:'0px',
-
+      fontFamily: "Noto Sans",
+      fontSize: "14px",
+      fontWeight: 400,
+      lineHeight: "24px",
+      letterSpacing: "0px",
     },
     caption: {
-        fontFamily: "Noto Sans",
-        fontSize: "14px",
-        fontWeight: 400,
-        lineHeight: "18px",
-        letterSpacing: 0,
+      fontFamily: "Noto Sans",
+      fontSize: "14px",
+      fontWeight: 400,
+      lineHeight: "18px",
+      letterSpacing: 0,
     },
     button: {
-        fontFamily: "Raleway",
-        fontSize: "18px",
-        fontWeight: 700,
-        lineHeight: "31px",
-        letterSpacing: 0,
-      
-      },
-      
+      fontFamily: "Raleway",
+      fontSize: "18px",
+      fontWeight: 700,
+      lineHeight: "31px",
+      letterSpacing: 0,
+    },
   },
-  
 });
 
 theme.components = {
   MuiButton: {
     styleOverrides: {
       root: {
-        width: '280px',
-        height: '48px',
-        padding: '8px 16px',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        gap: '8px',
+        width: "280px",
+        height: "48px",
+        padding: "8px 16px",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        borderRadius: "8px",
+        gap: "8px",
         flexShrink: 0,
-        textTransform: 'capitalize',
-        '&:hover': {
+        textTransform: "capitalize",
+        "&:hover": {
           backgroundColor: `${theme.palette.primary.dark} !important`,
         },
       },
-      },
-  }, 
+    },
+  },
 };
 
 export default theme;

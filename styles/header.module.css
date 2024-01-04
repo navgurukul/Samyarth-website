@@ -9,3 +9,8 @@ header.header {
   color: #404040;
   text-decoration: none;
 }
+
+.horizontal-scroll {
+  overflow-x: auto;
+  white-space: nowrap;
+}
