@@ -13,4 +13,5 @@ header.header {
 .horizontal-scroll {
   overflow-x: auto;
   white-space: nowrap;
+  -webkit-overflow-scrolling: touch; /* Enables smooth scrolling on iOS devices */
 }
