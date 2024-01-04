@@ -2,8 +2,12 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Typography, Container, Divider, Grid, Box } from '@mui/material';
 import Image from 'next/image';
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { breakpoints } from "../styles/constant";
+
 
 const Team = () => {
+  const isActive = useMediaQuery("(max-width:" + breakpoints.values.sm + "px)");
   const [teamData, setTeamData] = useState({ supporters: [], teamMember: [] });
 
   useEffect(() => {

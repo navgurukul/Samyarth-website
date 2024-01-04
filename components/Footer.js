@@ -22,7 +22,7 @@ const Footer = () => {
           </Grid>
           <Grid item xs={12} md={6} container justifyContent="flex-end">
             <Box>
-              <Box sx={{ display: 'flex', gap: '5px' }}>
+              {/* <Box sx={{ display: 'flex', gap: '5px' }}>
                 <IconButton aria-label="facebook">
                   <Avatar sx={{ width: 30, height: 30, backgroundColor: '#D9D9D9' }}>
                     <Facebook />
@@ -38,7 +38,7 @@ const Footer = () => {
                     <Instagram />
                   </Avatar>
                 </IconButton>
-              </Box>
+              </Box> */}
               <Box>
                 <Typography variant="body2">
                   vaibhav.m@navgurkul.org

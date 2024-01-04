@@ -3,7 +3,7 @@ import { Typography,Container, Divider } from '@mui/material';
 
 function About() {
   return (
-    <Container   sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center',justifyContent: 'center',}} maxWidth="md">   
+    <Container   sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center',justifyContent: 'center', mt:5}} maxWidth="md">   
       <Typography variant="h4" textAlign={'center'} mb={'32px'} >
         About <span style={{ color: '#4A9088' }}>Samy</span>arth
         <Divider variant="middle" sx={{ background: '#4A9088',height: '3px',width: '40%', margin: 'auto',}}/>
