@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Typography, Container, Divider, Grid, Box } from '@mui/material';
+import { Typography, Container, Divider, Grid, Box,Button } from '@mui/material';
 import Image from 'next/image';
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { breakpoints } from "../styles/constant";
@@ -9,6 +9,11 @@ import { breakpoints } from "../styles/constant";
 const Team = () => {
   const isActive = useMediaQuery("(max-width:" + breakpoints.values.sm + "px)");
   const [teamData, setTeamData] = useState({ supporters: [], teamMember: [] });
+  const [showMore, setShowMore] = useState(false);
+
+  const handleSeeMoreClick = () => {
+    setShowMore(true);
+  };
 
   useEffect(() => {
     const fetchTeamData = async () => {
@@ -36,8 +41,6 @@ const Team = () => {
             }
           }
         });
-
-        // Shuffle the teamMember array
         const shuffledTeamMember = shuffleArray(teamMember);
 
         setTeamData({ supporters, teamMember: shuffledTeamMember });
@@ -47,9 +50,8 @@ const Team = () => {
     };
 
     fetchTeamData();
-  }, []); // Empty dependency array to simulate component mount
+  }, []); 
 
-  // Fisher-Yates (Knuth) shuffle algorithm
   const shuffleArray = (array) => {
     for (let i = array.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -96,7 +98,7 @@ const Team = () => {
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
-                margin: "0 34px", // Adjust margin as needed
+                margin: "0 34px", 
               }}
             >
               <Image src={teamMember.Photo.replace(/^http:\/\//i, 'https://')} alt={teamMember.Name} width={100} height={100} style={{ borderRadius: '50%' }} />
@@ -105,19 +107,29 @@ const Team = () => {
            </div>
           ))}
       
-        </Container>): (<Grid container spacing={2} justifyContent="center" alignItems="center">
-          {teamData.teamMember.map((teamMember, index) => (
-            <Grid item key={index} xs={12} sm={6} md={4} lg={3}>
-              <Box textAlign="center">
-                <Image src={teamMember.Photo.replace(/^http:\/\//i, 'https://')} alt={teamMember.Name} width={100} height={100} style={{ borderRadius: '50%' }} />
-              </Box>
-              <Box textAlign="center">
-                <Typography variant="body1">{teamMember.Name}</Typography>
-                <Typography variant="body1" color={'#6D6D6D'}>{teamMember.Designation}</Typography>
-              </Box>
-            </Grid>
-          ))}
-        </Grid>)}
+        </Container>): (
+          <Grid container spacing={2} justifyContent="center" alignItems="center">
+            {teamData.teamMember.slice(0, showMore ? teamData.teamMember.length : 4).map((teamMember, index) => (
+              <Grid item key={index} xs={12} sm={6} md={4} lg={3}>
+                <Box textAlign="center">
+                  <Image src={teamMember.Photo.replace(/^http:\/\//i, 'https://')} alt={teamMember.Name} width={100} height={100} style={{ borderRadius: '50%' }} />
+                </Box>
+                <Box textAlign="center">
+                  <Typography variant="body1">{teamMember.Name}</Typography>
+                  <Typography variant="body1" color={'#6D6D6D'}>{teamMember.Designation}</Typography>
+                </Box>
+              </Grid>
+            ))}
+            {!showMore && teamData.teamMember.length > 4 && (
+              <Grid item xs={12} sx={{ mt: 2, textAlign: 'center' }}>
+                <Typography variant="body1"  color={ "#4A9088"} style={{ cursor: 'pointer' }} onClick={handleSeeMoreClick}>
+                  See More Teams
+                </Typography>
+              </Grid>
+            )}
+          </Grid>
+        
+        )}
     </Container>
   );
 };
