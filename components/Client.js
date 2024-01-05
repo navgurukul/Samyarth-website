@@ -41,7 +41,7 @@ const Client = () => {
           marginTop: "48px",
         }}
       >
-        <Typography variant="h4" pt={2} mb={4}>
+        <Typography variant="h4" pt={2} mb={"32px"}>
           Our Clients
           <Divider
           variant="middle"
@@ -85,7 +85,7 @@ const Client = () => {
           marginTop: "48px",
         }}
       >
-        <Typography variant="h4" pt={2} mb={4}>
+        <Typography variant="h4" pt={2} mb={"32px"}>
           Our Clients
           <Divider
           variant="middle"
