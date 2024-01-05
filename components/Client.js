@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography, Grid, Container } from "@mui/material";
+import { Typography, Grid, Container,Divider } from "@mui/material";
 import Slider from "react-slick";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { breakpoints } from "../styles/constant";
@@ -41,8 +41,17 @@ const Client = () => {
           marginTop: "48px",
         }}
       >
-        <Typography variant="h4" pt={2} mb={4}>
+        <Typography variant="h4" pt={2} mb={"32px"}>
           Our Clients
+          <Divider
+          variant="middle"
+          sx={{
+            background: "#4A9088",
+            height: "3px",
+            width: "25%",
+            margin: "auto",
+          }}
+        />
         </Typography>
         <Container maxWidth="xl">
           <Slider {...settings}>
@@ -76,8 +85,17 @@ const Client = () => {
           marginTop: "48px",
         }}
       >
-        <Typography variant="h4" pt={2} mb={4}>
+        <Typography variant="h4" pt={2} mb={"32px"}>
           Our Clients
+          <Divider
+          variant="middle"
+          sx={{
+            background: "#4A9088",
+            height: "3px",
+            width: "9%",
+            margin: "auto",
+          }}
+        />
         </Typography>
         <Container maxWidth="xl">
           <Grid container spacing={0}>
