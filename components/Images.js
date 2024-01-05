@@ -21,7 +21,7 @@ function Images() {
     <Grid container justifyContent="center" sx={{ mt: '64px', mb: "30px" }}>
       {imageUrls.map((imageUrl, index) => (
         <Grid item key={index} xs={12} sm={6} md={4}>
-          <div style={{ position: 'relative', width: '100%', height: '100px', paddingBottom: '100%' }}>
+          <div style={{ position: 'relative', width: '100%', height: '100px', paddingBottom: '90%' }}>
             <Image
               src={imageUrl}
               alt={`Image ${index + 1}`}

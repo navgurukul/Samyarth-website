@@ -2,13 +2,16 @@ import React from 'react';
 import { Grid, Typography, Container, Box, IconButton, Avatar } from '@mui/material';
 import Image from 'next/image';
 import { Facebook, Twitter, Instagram } from '@mui/icons-material';
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { breakpoints } from "../styles/constant";
 
 const Footer = () => {
+  const isActive = useMediaQuery(`(max-width:${breakpoints.values.sm}px)`);
   return (
     <div style={{ width: '100%', backgroundColor: '#FFFFFF', padding: '10px', marginTop: '32px' }}>
       <Container>
-        <Grid container>
-          <Grid item xs={12} md={6}>
+        <Grid container >
+          <Grid item xs={12} md={6} sx={isActive ? { textAlign: 'center' } : null}>
             <Box>
               <Box style={{ marginBottom: '-20px' }}>
                 <Image src="/logo.svg" alt="Logo" width={100} height={50} />
@@ -20,7 +23,7 @@ const Footer = () => {
               </Box>
             </Box>
           </Grid>
-          <Grid item xs={12} md={6} container justifyContent="flex-end">
+          <Grid item xs={12} md={6} container  justifyContent={isActive ? "center" : "flex-end"}>
             <Box>
               {/* <Box sx={{ display: 'flex', gap: '5px' }}>
                 <IconButton aria-label="facebook">

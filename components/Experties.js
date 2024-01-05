@@ -140,7 +140,7 @@ const Experties = () => {
               key={index}
               xs={12}
               sm={6} // Adjust the width as needed
-              md={3}
+              md={4}
               sx={{ display: "flex", justifyContent: "center" }}
             >
               <div style={{ textAlign: "center", marginTop: "16px" }}>
