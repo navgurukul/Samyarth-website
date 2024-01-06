@@ -8,7 +8,7 @@ function Images() {
   const isActive = useMediaQuery("(max-width:" + breakpoints.values.sm + "px)");
   const imageUrls = [
     '/images/learning1.jpg',
-    '/images/learning2.jpg',
+    '/images/office.jpeg',
     '/images/learning4.jpg',
   ];
 

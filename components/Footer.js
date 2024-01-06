@@ -8,7 +8,7 @@ import { breakpoints } from "../styles/constant";
 const Footer = () => {
   const isActive = useMediaQuery(`(max-width:${breakpoints.values.sm}px)`);
   return (
-    <div style={{ width: '100%', backgroundColor: '#FFFFFF', padding: '10px', marginTop: '32px' }}>
+    <div style={{ width: '100%', backgroundColor: '#FFFFFF', padding: '10px', marginTop: '45px' }}>
       <Container>
         <Grid container >
           <Grid item xs={12} md={6} sx={isActive ? { textAlign: 'center' } : null}>
@@ -42,7 +42,7 @@ const Footer = () => {
                   </Avatar>
                 </IconButton>
               </Box> */}
-              <Box>
+              <Box sx={{mt:2}}>
                 <Typography variant="body2">
                   vaibhav.m@navgurkul.org
                 </Typography>

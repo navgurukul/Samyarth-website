@@ -55,9 +55,17 @@ const Home = () => {
       <Client />
       <WhySamyarth />
       <WorkingModel />
-    <Experties />
-    <Team />
-    <Footer /> 
+      <Experties />
+      <Team />
+      <Container maxWidth="md" sx={{ mt: 7 }}>
+        <Typography variant="subtitle1" textAlign={"center"} mb={"32px"}>
+          “ All the proceeds go to the Samyarth team staying true to the spirit
+          of cooperativism further enabling extremely competitive pricing for
+          the organisations ”
+        </Typography>
+      </Container>
+
+      <Footer />
     </>
   );
 };
