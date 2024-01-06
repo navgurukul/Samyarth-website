@@ -40,12 +40,12 @@ const Client = () => {
       style={{
         width: "100%",
         backgroundColor: "#F7F7F7",
-        padding: isActive ? "0px 10px" : "80px 300px",
+        padding: isActive ? "0px 10px" : "43px 100px",
         textAlign: "center",
-        marginTop: "48px",
+        marginTop: "40px",
       }}
     >
-      <Typography variant="h4" pt={2} mb={"32px"}>
+      <Typography variant="h4" mb={5} >
         Our Clients
         <Divider
           variant="middle"

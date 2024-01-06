@@ -25,8 +25,8 @@ function MyApp({ Component, pageProps }) {
         <title>Samyarth</title>
         <meta name="description" content="Created by Navgurukul" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        {/* <link rel="icon" href="/Samyarth.svg" /> */}
-        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/Samyarth.svg" />
+        {/* <link rel="icon" href="/favicon.ico" sizes="any" /> */}
         <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap"
