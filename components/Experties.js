@@ -106,7 +106,7 @@ const Experties = () => {
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
-                margin: "0 30px", // Adjust margin as needed
+                margin: "0 36px", 
               }}
             >
               <Image
