@@ -32,7 +32,7 @@ function MyApp({ Component, pageProps }) {
           href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap"
         />
         <meta name="google-site-verification" content="nMvd9WByWn1x1P4EG-bjB0GK1SLWogj78tioeBspFcU" />
-
+        <meta name="google-site-verification" content="yUlWIKMXV-7EHdd-BjKIi0qDe9yW-AHqYAPlI9J1GCo" />
       </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />
